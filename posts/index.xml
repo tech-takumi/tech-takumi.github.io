@@ -2,11 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Tech Takumi</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://tech-takumi.github.io/posts/</link>
     <description>Recent content in Posts on Tech Takumi</description>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Aug 2024 23:47:55 +0200</lastBuildDate>
+    <atom:link href="https://tech-takumi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Automate Your Router&#39;s Backup and Keep Your Sanity Intact</title>
+      <link>https://tech-takumi.github.io/posts/automate-router-backup/</link>
+      <pubDate>Sat, 17 Aug 2024 23:47:55 +0200</pubDate>
+      <guid>https://tech-takumi.github.io/posts/automate-router-backup/</guid>
+      <description>Automating My Fritz!Box Backup: The Quest for Router Zen Every techie knows that there’s nothing quite like the feeling of having your entire setup just&amp;hellip; work. But let’s be honest—this nirvana is often more myth than reality. I’ve always envisioned automating the configuration of all my devices, making it reproducible, and yes, even bulletproof. The router, of course, had to be part of this vision.
+Why Bother with Router Backups? Let’s face it—routers are the unsung heroes of our homes.</description>
+    </item>
   </channel>
 </rss>
