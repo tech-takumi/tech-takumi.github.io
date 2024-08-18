@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Constraints Existing Tech Part1 | Tech Takumi</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction Do you ever wonder: what could I take as my next project? Well, I do. And it usually begins with the thought of acquiring a new device for tinkering.
+But what if the thingy costs as much as a kidney? Or if it will take 3 weeks to get to your place?
+The epiphany I had, and which I wanted to share, is the fact that there is joy in just messing around with stuff that you have at hand.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/constraints-existing-tech-part1/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/constraints-existing-tech-part1/post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Tech Takumi (Alt + H)">Tech Takumi</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Constraints Existing Tech Part1
+    </h1>
+    <div class="post-meta"><span title='2024-08-18 12:35:21 +0200 CEST'>August 18, 2024</span>
+
+
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</div>
+  </header> 
+  <div class="post-content"><h3 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h3>
+<p>Do you ever wonder: what could I take as my next project? Well, I do. And it usually begins with the thought of acquiring a new device for tinkering.</p>
+<p>But what if the thingy costs as much as a kidney? Or if it will take 3 weeks to get to your place?</p>
+<p>The epiphany I had, and which I wanted to share, is the fact that there is joy in just messing around with stuff that you have at hand. Especially with the things that you use every day and in with the right point of view, can review a lot of secret goodies.</p>
+<p>This thought occurred to me while staring at my current desk setup at my new home office. In front of me I have a standing desk that I bought during work from home COVID era, a Logitech Bluetooth/wireless keyboard and mouse set, my PC (nothing fancy), a Bluetooth soundbar that I use as my PC speaker, a USB-C docking station that I use to plug/charge my work laptop in the occasional time I bring it home, my monitor and an external webcam.</p>
+<p>{{ $image := .Resources.Get &ldquo;20230924_135911.jpg&rdquo; }}
+<img loading="lazy" src="20230924_135911.jpg" alt="My Workspace - as described above"  />
+</p>
+<p>This setup is very functional, making it easy to work with my Linux PC or switching to my work Windows laptop in less than 10 sec. It fits my taste of not being cluttered and has the right tones of grey and matte black everywhere.</p>
+<p>However, setups like these always have room for improvement. As you may already have anticipated, the first idea that I got was to improve on the integration of the stuff I have laying around and to fix some aesthetics hiccups of my setup.</p>
+<pre class="mermaid">%%{init: {'theme': 'dark'}}%%
+flowchart TD
+    PC["PC"]
+    Monitor["Monitor"]
+    Keyboard["Keyboard"]
+    Mouse["Mouse"]
+    Soundbar["Soundbar"]
+    DockingStation["DockingStation"]
+    Webcam["Webcam"]
+    Laptop["Laptop"]
+
+    PC -->|DisplayPort| Monitor
+    PC -->|Bluetooth| Soundbar
+    PC -->|"Logitech Wireless"| Keyboard
+    PC -->|"Logitech Wireless"| Mouse
+    PC -->|"USB-C PD"| DockingStation
+    DockingStation -->|"USB-C"| Monitor
+    DockingStation -->|"USB-A"| Webcam
+    Laptop -->|"USB-C"| DockingStation
+</pre>
+<p>Listing some ideas down here, without any particular order:</p>
+<ol>
+<li>Switching back and forth between my PC and work laptop though fast, still requires 3 steps: switching my keyboard, my mouse and finally the monitor. Can I make them all work in sync?</li>
+<li>I have to turn on my soundbar every time I start using my PC after more than 30 min. Is there a way to get &ldquo;wake on Bluetooth&rdquo;?</li>
+<li>My standing desk has a digital panel, connected through a RJ45 cable to the motor controller. Why can&rsquo;t it be controlled by my PC?</li>
+<li>I find it kind of ugly having to leave a USB-C cable hanging out of the front of my docking station to charge my work laptop. How could I still get my laptop charged without this loose cable?</li>
+</ol>
+<p>This will be a multi-part series of posts on how I get myself lost in those superfluous, but interesting (for me at least) topics.</p>
+<h3 id="seamless-kvm">Seamless KVM<a hidden class="anchor" aria-hidden="true" href="#seamless-kvm">#</a></h3>
+<p>My ideal workflow would be to use my Logi MX Keys host switching keys (it capability to be connected up to 3 devices - same as my Logi MX Master 3 mouse) to switch all my connections (monitor, keyboard, mouse) at once.</p>
+<p>&laquo; Insert Photo &raquo;</p>
+<p>This would be possible if the keyboard has a way to inform to the host device which one is currently being assigned and if this host device could command the monitor and mouse to switch to the corresponding device.</p>
+<p>This should be especially tricky if the host device loses its connections to the keyboard when it is no longer the selected device. But let&rsquo;s check what can be done.</p>
+<p>My keyboard is currently connected to my PC through this proprietary Logi wireless protocol to communicate with the USB dongle plugged in my PC.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>XXXXXXXXX@ws1:~$ lsusb 
+</span></span><span style="display:flex;"><span>Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</span></span><span style="display:flex;"><span>Bus 001 Device 003: ID 046d:c52b Logitech, Inc. Unifying Receiver
+</span></span><span style="display:flex;"><span>Bus 001 Device 002: ID 8087:0a2b Intel Corp. Bluetooth wireless interface
+</span></span><span style="display:flex;"><span>Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span></span></code></pre></div><p>So, <code>lsusb</code> shows the dongle to be &ldquo;Logitech, Inc. Unifying Receiver&rdquo; (<a href="https://en.wikipedia.org/wiki/Logitech_Unifying_receiver">Wikipedia</a>). Searching around in Google, it seems that the dongle uses an extended version of the HID protocol (&ldquo;HID++&rdquo;) and there are already some user friendly API implementation on Linux for receiving and transmitting commands through it. First that I&rsquo;ve found was <a href="https://github.com/pwr-Solaar/Solaar">Solaar</a>, which, after unwisely creating <code>udev</code> <a href="https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/rules.d-uinput/42-logitech-unify-permissions.rules">rules</a> to allow my user to have write access to <code>/dev/hidraw0</code>, I could list the capabilities of the receiver and my keyboard and mouse:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>XXXXXXXXX@ws1:~$ solaar show
+</span></span><span style="display:flex;"><span>Solaar version 1.1.1
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Unifying Receiver
+</span></span><span style="display:flex;"><span>  Device path  : /dev/hidraw0
+</span></span><span style="display:flex;"><span>  USB id       : 046d:C52B
+</span></span><span style="display:flex;"><span>  Serial       : XXXXXXXXX
+</span></span><span style="display:flex;"><span>    Firmware   : 12.11.B0032
+</span></span><span style="display:flex;"><span>    Bootloader : 04.16
+</span></span><span style="display:flex;"><span>    Other      : AA.AA
+</span></span><span style="display:flex;"><span>  Has 2 paired device(s) out of a maximum of 6.
+</span></span><span style="display:flex;"><span>  Notifications: wireless, software present (0x000900)
+</span></span><span style="display:flex;"><span>  Device activity counters: 1=75, 2=22
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  1: MX Keys Keyboard
+</span></span><span style="display:flex;"><span>     Device path  : /dev/hidraw1
+</span></span><span style="display:flex;"><span>     WPID         : 408A
+</span></span><span style="display:flex;"><span>     Codename     : MX Keys
+</span></span><span style="display:flex;"><span>     Kind         : keyboard
+</span></span><span style="display:flex;"><span>     Protocol     : HID++ 4.5
+</span></span><span style="display:flex;"><span>     Polling rate : 20 ms (50Hz)
+</span></span><span style="display:flex;"><span>     Serial number: XXXXXXXXX
+</span></span><span style="display:flex;"><span>     Model ID:      B35B408A0000
+</span></span><span style="display:flex;"><span>     Unit ID:       XXXXXXXXX
+</span></span><span style="display:flex;"><span>        Bootloader: BL1 08.00.B0011
+</span></span><span style="display:flex;"><span>          Firmware: MPK 12.01.B0013
+</span></span><span style="display:flex;"><span>             Other: 
+</span></span><span style="display:flex;"><span>     The power switch is located on the edge of top right corner.
+</span></span><span style="display:flex;"><span>     Supports 33 HID++ 2.0 features:
+</span></span><span style="display:flex;"><span>         0: ROOT                   {0000}   
+</span></span><span style="display:flex;"><span>         1: FEATURE SET            {0001}   
+</span></span><span style="display:flex;"><span>         2: DEVICE FW VERSION      {0003}   
+</span></span><span style="display:flex;"><span>            Firmware: Bootloader BL1 08.00.B0011 00008169E8BB
+</span></span><span style="display:flex;"><span>            Firmware: Firmware MPK 12.01.B0013 408AFE037737
+</span></span><span style="display:flex;"><span>            Firmware: Other   
+</span></span><span style="display:flex;"><span>            Unit ID: XXXXXXXXX  Model ID: B35B408A0000  Transport IDs: {&#39;btleid&#39;: &#39;B35B&#39;, &#39;wpid&#39;: &#39;408A&#39;}
+</span></span><span style="display:flex;"><span>         3: DEVICE NAME            {0005}   
+</span></span><span style="display:flex;"><span>            Name: MX Keys Wireless Keyboard
+</span></span><span style="display:flex;"><span>            Kind: keyboard
+</span></span><span style="display:flex;"><span>         4: WIRELESS DEVICE STATUS {1D4B}   
+</span></span><span style="display:flex;"><span>         5: RESET                  {0020}   
+</span></span><span style="display:flex;"><span>         6: DEVICE FRIENDLY NAME   {0007}   
+</span></span><span style="display:flex;"><span>            Friendly Name: MX Keys
+</span></span><span style="display:flex;"><span>         7: BATTERY STATUS         {1000}   
+</span></span><span style="display:flex;"><span>            Battery: 50%, discharging, next level 20%.
+</span></span><span style="display:flex;"><span>         8: REPROG CONTROLS V4     {1B04}   
+</span></span><span style="display:flex;"><span>            Key/Button Diversion (saved): {&#39;10&#39;: 0, &#39;110&#39;: 0, &#39;111&#39;: 0, &#39;191&#39;: 0, &#39;199&#39;: 0, &#39;200&#39;: 0, &#39;209&#39;: 0, &#39;210&#39;: 0, &#39;211&#39;: 0, &#39;224&#39;: 0, &#39;225&#39;: 0, &#39;226&#39;: 0, &#39;227&#39;: 0, &#39;228&#39;: 0, &#39;229&#39;: 0, &#39;230&#39;: 0, &#39;231&#39;: 0, &#39;232&#39;: 0, &#39;233&#39;: 0, &#39;234&#39;: 0, &#39;235&#39;: 0, &#39;236&#39;: 0}
+</span></span><span style="display:flex;"><span>            Key/Button Diversion        : {&#39;209&#39;: 0, &#39;210&#39;: 0, &#39;211&#39;: 0, &#39;199&#39;: 0, &#39;200&#39;: 0, &#39;224&#39;: 0, &#39;225&#39;: 0, &#39;110&#39;: 0, &#39;226&#39;: 0, &#39;227&#39;: 0, &#39;228&#39;: 0, &#39;229&#39;: 0, &#39;230&#39;: 0, &#39;231&#39;: 0, &#39;232&#39;: 0, &#39;233&#39;: 0, &#39;10&#39;: 0, &#39;191&#39;: 0, &#39;234&#39;: 0, &#39;111&#39;: 0, &#39;236&#39;: 0, &#39;235&#39;: 0}
+</span></span><span style="display:flex;"><span>         9: CHANGE HOST            {1814}   
+</span></span><span style="display:flex;"><span>            Change Host        : 1:XXXXXXXXX
+</span></span><span style="display:flex;"><span>        10: HOSTS INFO             {1815}   
+</span></span><span style="display:flex;"><span>            Host 0 (paired): XXXXXXXXX
+</span></span><span style="display:flex;"><span>            Host 1 (paired): XXXXXXXXX
+</span></span><span style="display:flex;"><span>            Host 2 (paired): XXXXXXXXX
+</span></span><span style="display:flex;"><span>        11: BACKLIGHT2             {1982}   
+</span></span><span style="display:flex;"><span>            Backlight (saved): True
+</span></span><span style="display:flex;"><span>            Backlight        : True
+</span></span><span style="display:flex;"><span>        12: K375S FN INVERSION     {40A3}   
+</span></span><span style="display:flex;"><span>            Swap Fx function (saved): False
+</span></span><span style="display:flex;"><span>            Swap Fx function        : False
+</span></span><span style="display:flex;"><span>        13: ENCRYPTION             {4100}   
+</span></span><span style="display:flex;"><span>        14: LOCK KEY STATE         {4220}   
+</span></span><span style="display:flex;"><span>        15: KEYBOARD DISABLE KEYS  {4521}   
+</span></span><span style="display:flex;"><span>            Disable keys (saved): {&#39;1&#39;: False, &#39;16&#39;: False, &#39;2&#39;: False, &#39;4&#39;: False, &#39;8&#39;: False}
+</span></span><span style="display:flex;"><span>            Disable keys        : {&#39;1&#39;: False, &#39;2&#39;: False, &#39;4&#39;: False, &#39;8&#39;: False, &#39;16&#39;: False}
+</span></span><span style="display:flex;"><span>        16: MULTIPLATFORM          {4531}   
+</span></span><span style="display:flex;"><span>            Set OS (saved): 0
+</span></span><span style="display:flex;"><span>            Set OS        : Windows
+</span></span><span style="display:flex;"><span>        17: DFUCONTROL SIGNED      {00C2}   
+</span></span><span style="display:flex;"><span>        18: DEVICE RESET           {1802}   internal, hidden
+</span></span><span style="display:flex;"><span>        19: unknown:1803           {1803}   internal, hidden
+</span></span><span style="display:flex;"><span>        20: CONFIG DEVICE PROPS    {1806}   internal, hidden
+</span></span><span style="display:flex;"><span>        21: unknown:1813           {1813}   internal, hidden
+</span></span><span style="display:flex;"><span>        22: OOBSTATE               {1805}   internal, hidden
+</span></span><span style="display:flex;"><span>        23: unknown:1830           {1830}   internal, hidden
+</span></span><span style="display:flex;"><span>        24: unknown:1890           {1890}   internal, hidden
+</span></span><span style="display:flex;"><span>        25: unknown:1891           {1891}   internal, hidden
+</span></span><span style="display:flex;"><span>        26: unknown:18A1           {18A1}   internal, hidden
+</span></span><span style="display:flex;"><span>        27: unknown:1DF3           {1DF3}   internal, hidden
+</span></span><span style="display:flex;"><span>        28: unknown:1E00           {1E00}   hidden
+</span></span><span style="display:flex;"><span>        29: unknown:1EB0           {1EB0}   internal, hidden
+</span></span><span style="display:flex;"><span>        30: unknown:1861           {1861}   internal, hidden
+</span></span><span style="display:flex;"><span>        31: unknown:1A20           {1A20}   internal, hidden
+</span></span><span style="display:flex;"><span>        32: unknown:18B0           {18B0}   internal, hidden
+</span></span><span style="display:flex;"><span>     Has 24 reprogrammable keys:
+</span></span><span style="display:flex;"><span>         0: Host Switch Channel 1     , default: HostSwitch Channel 1        =&gt; HostSwitch Channel 1      
+</span></span><span style="display:flex;"><span>             nonstandard, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         1: Host Switch Channel 2     , default: HostSwitch Channel 2        =&gt; HostSwitch Channel 2      
+</span></span><span style="display:flex;"><span>             nonstandard, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         2: Host Switch Channel 3     , default: HostSwitch Channel 3        =&gt; HostSwitch Channel 3      
+</span></span><span style="display:flex;"><span>             nonstandard, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         3: Brightness Down           , default: Brightness Down             =&gt; Brightness Down           
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:1, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         4: Brightness Up             , default: Brightness Up               =&gt; Brightness Up             
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:2, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         5: Mission Control/Task View , default: Mission Control/Task View   =&gt; Mission Control/Task View 
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:3, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         6: Dashboard Launchpad/Action Center, default: Dashboard Launchpad/Action Center =&gt; Dashboard Launchpad/Action Center
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:4, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         7: Show Desktop              , default: Show Desktop                =&gt; Show Desktop              
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:5, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         8: Backlight Down            , default: Backlight Down              =&gt; Backlight Down            
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:6, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>         9: Backlight Up              , default: Backlight Up                =&gt; Backlight Up              
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:7, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        10: Previous Fn               , default: Previous                    =&gt; Previous                  
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:8, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        11: Play/Pause Fn             , default: Play/Pause                  =&gt; Play/Pause                
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:9, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        12: Next Fn                   , default: Next                        =&gt; Next                      
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:10, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        13: Mute Fn                   , default: Mute                        =&gt; Mute                      
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:11, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        14: Volume Down Fn            , default: Volume Down                 =&gt; Volume Down               
+</span></span><span style="display:flex;"><span>             is FN, FN sensitive, reprogrammable, divertable, persistently divertable, analytics key events, pos:12, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        15: Volume Up Fn              , default: Volume Up                   =&gt; Volume Up                 
+</span></span><span style="display:flex;"><span>             nonstandard, reprogrammable, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        16: Calculator                , default: Calculator                  =&gt; Calculator                
+</span></span><span style="display:flex;"><span>             nonstandard, reprogrammable, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        17: Screen Capture/Print Screen, default: Screen Capture              =&gt; Screen Capture            
+</span></span><span style="display:flex;"><span>             nonstandard, reprogrammable, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        18: App Contextual Menu/Right Click, default: Right Click/App Contextual Menu =&gt; Right Click/App Contextual Menu
+</span></span><span style="display:flex;"><span>             nonstandard, reprogrammable, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        19: Lock PC                   , default: WindowsLock                 =&gt; WindowsLock               
+</span></span><span style="display:flex;"><span>             nonstandard, reprogrammable, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        20: Left Arrow                , default: Keyboard Left Arrow         =&gt; Keyboard Left Arrow       
+</span></span><span style="display:flex;"><span>             nonstandard, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        21: Right Arrow               , default: Keyboard Right Arrow        =&gt; Keyboard Right Arrow      
+</span></span><span style="display:flex;"><span>             nonstandard, divertable, persistently divertable, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        22: F Lock                    , default: Do Nothing One              =&gt; Do Nothing One            
+</span></span><span style="display:flex;"><span>             is FN, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>        23: unknown:0034              , default: Do Nothing One              =&gt; Do Nothing One            
+</span></span><span style="display:flex;"><span>             nonstandard, analytics key events, pos:0, group:0, group mask:empty
+</span></span><span style="display:flex;"><span>             reporting: default
+</span></span><span style="display:flex;"><span>     Battery: 50%, discharging, next level 20%.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>  2: MX Master 3 Wireless Mouse
+</span></span><span style="display:flex;"><span>     Device path  : /dev/hidraw2
+</span></span><span style="display:flex;"><span>     WPID         : 4082
+</span></span><span style="display:flex;"><span>     Codename     : MX Master 3
+</span></span><span style="display:flex;"><span>     Kind         : mouse
+</span></span><span style="display:flex;"><span>     Protocol     : HID++ 4.5
+</span></span><span style="display:flex;"><span>     Polling rate : 8 ms (125Hz)
+</span></span><span style="display:flex;"><span>     Serial number: XXXXXXXXX
+</span></span><span style="display:flex;"><span>     The power switch is located on the base.
+</span></span><span style="display:flex;"><span>     Battery: unknown (device is offline).
+</span></span></code></pre></div><p>So, with a simple <code>solaar config 2 change-host 3</code>, I could switch my mouse to the host configured on button 3. This is great as I was planning to have my mouse following my keyboard&rsquo;s events. However, when I tried to switch the mouse back to my PC:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>XXXXXXXXX@ws1:~$ solaar config 2 change-host 3
+</span></span><span style="display:flex;"><span>Setting change-host of MX Master 3 Wireless Mouse to 3
+</span></span><span style="display:flex;"><span>rodrigo@ws1:~$ solaar config 2 change-host 1
+</span></span><span style="display:flex;"><span>solaar: error: Traceback (most recent call last):
+</span></span><span style="display:flex;"><span>  File &#34;/usr/share/solaar/lib/solaar/cli/__init__.py&#34;, line 204, in run
+</span></span><span style="display:flex;"><span>    m.run(c, args, _find_receiver, _find_device)
+</span></span><span style="display:flex;"><span>  File &#34;/usr/share/solaar/lib/solaar/cli/config.py&#34;, line 124, in run
+</span></span><span style="display:flex;"><span>    raise Exception(&#34;no online device found matching &#39;%s&#39;&#34; % device_name)
+</span></span><span style="display:flex;"><span>Exception: no online device found matching &#39;2&#39;
+</span></span></code></pre></div><p>Oh-oh! I&rsquo;ve lost connection to the mouse! In a way, it is obvious: why would you want a host that is no longer receiving inputs from the device to be able to affect what another host currently connected get? Kind of a security issue, don&rsquo;t you think?</p>
+<p>So, I can make the mouse go from my PC to work laptop, but I cannot bring it back. Let me think through my options:</p>
+<ol>
+<li>Have software installed in all my target host computers that could coordinate sending the devices back and forth between then</li>
+<li>Hack my way through the RF protocol to inject commands to the devices</li>
+<li>Give up</li>
+</ol>
+<p>It is still too early for option 3. What about option 1? Let&rsquo;s take a deeper look into it. Searching around in Logitech&rsquo;s site, I&rsquo;ve found this app they created called &ldquo;Logitech Flow&rdquo;. According to its <a href="https://usa.ingrammicro.com/media/Documents/vendors/l/logitech/flow_white_paper.pdf">whitepaper</a>, it is almost exactly what I described in option 1, with some more extra mechanism to auto-discover hosts through the internet (sketchy) and some fancy UI to switch hosts when the mouse get to the edge of the monitor (reminded me of the old <a href="https://symless.com/synergy">Synergy</a> implementation).</p>
+<p>And, what do you say, some cool folks already implemented an open source version of the tool in python, using the libraries that the team behind Solaar created: <a href="https://github.com/coddingtonbear/logitech-flow-kvm">logitech-flow-kvm</a>. I had to fight a bit with <code>pip</code> to get it installed (needed to have <code>patchelf</code> installed and a newer version of the Meson build system), but in the end it worked flawlessly.</p>
+<p>However, at the end, I won&rsquo;t go for it. It won&rsquo;t work for me for 2 reasons: a) I don&rsquo;t want to install any non-compliant software in my work laptop and risk policy breaches and b) my 3rd host (the one configure to button 3), is an old iPad pro that I use to play Minecraft Bedrock with my kids. I do not want to mess with coding for it right now.</p>
+<p>Ok, so let&rsquo;s get our hands dirty with the radio protocol. What RF protocol does my logitech devices use to communicate to the receiver? According to <a href="http://uberoptions.wikidot.com/logitech-protocols">uberOptions wiki</a>:</p>
+<blockquote>
+<p>Logitech&rsquo;s current wireless keyboards and mice run on one of four wireless protocols:</p>
+<ul>
+<li>The proprietary 27 MHz &ldquo;FastRF&rdquo; protocol</li>
+<li>A proprietary 2.4 GHz wireless protocol (mostly mice, very few keyboards), I&rsquo;ll label this &ldquo;2.4 GHz Old&rdquo;</li>
+<li>The standard 2.4 GHz Bluetooth protocol</li>
+<li>A proprietary 2.4 GHz &ldquo;<a href="http://www.logitech.com/unifying">Unifying</a>&rdquo; wireless protocol (not compatible with any of the above)</li>
+</ul>
+</blockquote>
+<p>Fair to assume that we are under the last one there. I could go to the route using <a href="https://github.com/RoganDawes/LOGITacker">LOGITacker</a> tool which more or less would allow such injection. But once more it won&rsquo;t fly for me for 2 reasons: a) I don&rsquo;t have one of these cool RF dev boards (Nordic nRF52840, MakerDiary MDK or April Brother dongles) laying around and buying one defeats the purpose of this project (although very very tempting); and b) I would probably need to flash my receivers to an <a href="https://github.com/Logitech/fw_updates">old firmware</a> that is still vulnerable to the attacks (not recommended, at least, but doable with the <a href="https://github.com/RoganDawes/munifying">munifying</a> tool).</p>
+<p>Sooo, give up? Let&rsquo;s park this temporarily while we explore something else - controlling my monitor. To be precise I have a <a href="https://dl.dell.com/content/manual28515489-dell-p3421w-monitor-user-s-guide.pdf?language=en-us">Dell P3421W 34 in monitor</a>, which has some very interesting properties.</p>
+<p>It supports the <a href="https://en.wikipedia.org/wiki/Display_Data_Channel">DDC/CI</a> (Display Data Channel Command Interface) protocol, meaning it implements <a href="https://en.wikipedia.org/wiki/Monitor_Control_Command_Set">MCCS</a> (Monitor Control Command Set) over I2C. It basically allows one to send commands equivalent to anything that the on screen menu has.</p>
+<p>On Linux, we can use the <code>ddcutil</code> tool (<a href="https://www.ddcutil.com/#introduction">documentation</a>). If we run a query to list the capabilities of the monitor:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>XXXXXXXXX@ws1:~$ ddcutil capabilities
+</span></span><span style="display:flex;"><span>Model: P3421W
+</span></span><span style="display:flex;"><span>MCCS version: 2.1
+</span></span><span style="display:flex;"><span>Commands:
+</span></span><span style="display:flex;"><span>   Op Code: 01 (VCP Request)
+</span></span><span style="display:flex;"><span>   Op Code: 02 (VCP Response)
+</span></span><span style="display:flex;"><span>   Op Code: 03 (VCP Set)
+</span></span><span style="display:flex;"><span>   Op Code: 07 (Timing Request)
+</span></span><span style="display:flex;"><span>   Op Code: 0C (Save Settings)
+</span></span><span style="display:flex;"><span>   Op Code: E3 (Capabilities Reply)
+</span></span><span style="display:flex;"><span>   Op Code: F3 (Capabilities Request)
+</span></span><span style="display:flex;"><span>VCP Features:
+</span></span><span style="display:flex;"><span>   Feature: 02 (New control value)
+</span></span><span style="display:flex;"><span>   Feature: 04 (Restore factory defaults)
+</span></span><span style="display:flex;"><span>   Feature: 05 (Restore factory brightness/contrast defaults)
+</span></span><span style="display:flex;"><span>   Feature: 08 (Restore color defaults)
+</span></span><span style="display:flex;"><span>   Feature: 10 (Brightness)
+</span></span><span style="display:flex;"><span>   Feature: 12 (Contrast)
+</span></span><span style="display:flex;"><span>   Feature: 14 (Select color preset)
+</span></span><span style="display:flex;"><span>      Values:
+</span></span><span style="display:flex;"><span>         05: 6500 K
+</span></span><span style="display:flex;"><span>         08: 9300 K
+</span></span><span style="display:flex;"><span>         0b: User 1
+</span></span><span style="display:flex;"><span>         0c: User 2
+</span></span><span style="display:flex;"><span>   Feature: 16 (Video gain: Red)
+</span></span><span style="display:flex;"><span>   Feature: 18 (Video gain: Green)
+</span></span><span style="display:flex;"><span>   Feature: 1A (Video gain: Blue)
+</span></span><span style="display:flex;"><span>   Feature: 52 (Active control)
+</span></span><span style="display:flex;"><span>   Feature: 60 (Input Source)
+</span></span><span style="display:flex;"><span>      Values:
+</span></span><span style="display:flex;"><span>         1b: Unrecognized value
+</span></span><span style="display:flex;"><span>         0f: DisplayPort-1
+</span></span><span style="display:flex;"><span>         11: HDMI-1
+</span></span><span style="display:flex;"><span>   Feature: AC (Horizontal frequency)
+</span></span><span style="display:flex;"><span>   Feature: AE (Vertical frequency)
+</span></span><span style="display:flex;"><span>   Feature: B2 (Flat panel sub-pixel layout)
+</span></span><span style="display:flex;"><span>   Feature: B6 (Display technology type)
+</span></span><span style="display:flex;"><span>   Feature: C6 (Application enable key)
+</span></span><span style="display:flex;"><span>   Feature: C8 (Display controller type)
+</span></span><span style="display:flex;"><span>   Feature: C9 (Display firmware level)
+</span></span><span style="display:flex;"><span>   Feature: CC (OSD Language)
+</span></span><span style="display:flex;"><span>      Values:
+</span></span><span style="display:flex;"><span>         02: English
+</span></span><span style="display:flex;"><span>         03: French
+</span></span><span style="display:flex;"><span>         04: German
+</span></span><span style="display:flex;"><span>         06: Japanese
+</span></span><span style="display:flex;"><span>         09: Russian
+</span></span><span style="display:flex;"><span>         0a: Spanish
+</span></span><span style="display:flex;"><span>         0d: Chinese (simplified / Kantai)
+</span></span><span style="display:flex;"><span>         0e: Portuguese (Brazil)
+</span></span><span style="display:flex;"><span>   Feature: D6 (Power mode)
+</span></span><span style="display:flex;"><span>      Values:
+</span></span><span style="display:flex;"><span>         01: DPM: On,  DPMS: Off
+</span></span><span style="display:flex;"><span>         04: DPM: Off, DPMS: Off
+</span></span><span style="display:flex;"><span>         05: Write only value to turn off display
+</span></span><span style="display:flex;"><span>   Feature: DC (Display Mode)
+</span></span><span style="display:flex;"><span>      Values:
+</span></span><span style="display:flex;"><span>         00: Standard/Default mode
+</span></span><span style="display:flex;"><span>         03: Movie
+</span></span><span style="display:flex;"><span>         05: Games
+</span></span><span style="display:flex;"><span>   Feature: DF (VCP Version)
+</span></span><span style="display:flex;"><span>   Feature: E0 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: E1 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: E2 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>      Values: 00 1D 02 04 0E 12 14 (interpretation unavailable)
+</span></span><span style="display:flex;"><span>   Feature: E5 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: E7 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>      Values: 00 02 (interpretation unavailable)
+</span></span><span style="display:flex;"><span>   Feature: E8 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: E9 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>      Values: 00 01 02 21 22 24 (interpretation unavailable)
+</span></span><span style="display:flex;"><span>   Feature: F0 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>      Values: 00 0C (interpretation unavailable)
+</span></span><span style="display:flex;"><span>   Feature: F1 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: F2 (Manufacturer specific feature)
+</span></span><span style="display:flex;"><span>   Feature: FD (Manufacturer specific feature)
+</span></span></code></pre></div><p>Ah-ha! We have Feature 60 (Input Source) ready to be used to toggle between DisplayPort (PC - 0x0F), HDMI (not currently used - 0x11) or USB-C (marked here as &ldquo;Unrecognized value&rdquo; - 0x1B).</p>
+<p>So, with some glue shell script we could achieve a part of our goal mixing <code>logitech-flow-kvm</code> and <code>ddcutil</code> tools to control the monitor to follow the keyboard:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>XXXXXXXXX@ws1:~$ logitech-flow-kvm watch --on-disconnect-execute=&#34;ddcutil setvcp 60 0x1B&#34; --on-connect-execute=&#34;ddcutil setvcp 60 0x0F&#34; /dev/hidraw0:1
+</span></span><span style="display:flex;"><span>Listening for connection events for /dev/hidraw0:1
+</span></span><span style="display:flex;"><span>Press CTRL+C to exit
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>❌ Device disconnected
+</span></span><span style="display:flex;"><span>Executed &#39;ddcutil setvcp 60 0x1B&#39;; status 0.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>✅ Device connected
+</span></span><span style="display:flex;"><span>Executed &#39;ddcutil setvcp 60 0x0F&#39;; status 0.
+</span></span></code></pre></div><p>And it works! It is an improvement compared to before (now it&rsquo;s just keyboard and mouse that needs fiddling), but I am not overall satisfied.</p>
+<p>What I didn&rsquo;t share is another cool trick that this monitor has: it has an embedded USB KVM which allows the 4 downstream USB-A 3.0 ports to be shared to the USB-B or USB-C upstream ports. In the next post in this series I will explore if I can use it in a more seamless way than we achieved here.</p>
+<h3 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h3>
+<p>While still not nearly over, this small investigation of the junk I have laying around in my desk already provided me a couple of hours of fun, learning and trying new things. Also, I was fortunate to stumble in a lot of potential paths to explore such as an RF hacking project or even the cool thing that my keyboard has a <a href="https://web.archive.org/web/20150613033353/https://julien.danjou.info/blog/2012/logitech-k750-linux-support">light sensor</a> which could be used for home automation with <a href="https://www.home-assistant.io/">Home Assistant</a>. Let&rsquo;s see what we get from this!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Tech Takumi</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

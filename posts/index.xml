@@ -6,8 +6,17 @@
     <description>Recent content in Posts on Tech Takumi</description>
     <generator>Hugo -- 0.126.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Aug 2024 23:47:55 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2024 12:35:21 +0200</lastBuildDate>
     <atom:link href="https://tech-takumi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Constraints Existing Tech Part1</title>
+      <link>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</link>
+      <pubDate>Sun, 18 Aug 2024 12:35:21 +0200</pubDate>
+      <guid>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</guid>
+      <description>Introduction Do you ever wonder: what could I take as my next project? Well, I do. And it usually begins with the thought of acquiring a new device for tinkering.
+But what if the thingy costs as much as a kidney? Or if it will take 3 weeks to get to your place?
+The epiphany I had, and which I wanted to share, is the fact that there is joy in just messing around with stuff that you have at hand.</description>
+    </item>
     <item>
       <title>How to Automate Your Router&#39;s Backup and Keep Your Sanity Intact</title>
       <link>https://tech-takumi.github.io/posts/automate-router-backup/</link>
