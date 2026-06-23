@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Solved printer infrastructure</title>
+  <desc id="desc">Final home printing setup with access, management, and IoT VLANs carried by OpenWrt access points. Android clients talk to the print relay in access, the relay talks to CUPS in management, and CUPS talks to the printer in IoT.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#1f2937"/>
+    </marker>
+    <style>
+      .ink { stroke: #1f2937; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .dash { stroke: #64748b; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-dasharray: 7 7; }
+      .access { fill: #eff6ff; stroke: #1f2937; stroke-width: 2.4; }
+      .mgmt { fill: #ecfdf5; stroke: #1f2937; stroke-width: 2.4; }
+      .iot { fill: #fffbeb; stroke: #1f2937; stroke-width: 2.4; }
+      .transport { fill: #f5f3ff; stroke: #1f2937; stroke-width: 2.4; }
+      .card { fill: #fffefa; stroke: #1f2937; stroke-width: 2; }
+      .relay { fill: #dcfce7; stroke: #166534; stroke-width: 2; }
+      .warn { fill: #fee2e2; stroke: #991b1b; stroke-width: 2; }
+      .label { fill: #ffffff; stroke: #1f2937; stroke-width: 1.4; }
+      .title { fill: #111827; font: 700 30px sans-serif; text-anchor: middle; }
+      .head { fill: #111827; font: 700 18px sans-serif; text-anchor: middle; }
+      .text { fill: #111827; font: 16px sans-serif; }
+      .text-center { fill: #111827; font: 16px sans-serif; text-anchor: middle; }
+      .small { fill: #475569; font: 14px sans-serif; }
+      .small-center { fill: #475569; font: 14px sans-serif; text-anchor: middle; }
+      .mono { fill: #111827; font: 14px monospace; }
+      .tiny-mono { fill: #111827; font: 12px monospace; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="720" fill="#ffffff"/>
+  <text class="title" x="560" y="50">Final state: the printer looks local, but stays isolated</text>
+
+  <path class="access" d="M45 92 C52 85 346 87 354 96 C362 105 359 485 351 494 C343 503 55 501 47 493 C39 485 38 100 45 92 Z"/>
+  <path class="mgmt" d="M405 92 C413 85 715 87 723 96 C731 105 728 485 720 494 C712 503 415 501 407 493 C399 485 398 100 405 92 Z"/>
+  <path class="iot" d="M775 92 C783 85 1070 87 1078 96 C1086 105 1083 485 1075 494 C1067 503 785 501 777 493 C769 485 768 100 775 92 Z"/>
+
+  <text class="head" x="200" y="130">access VLAN/subnet</text>
+  <text class="small-center" x="200" y="153">family devices and local print relay</text>
+  <text class="head" x="565" y="130">mgmt VLAN/subnet</text>
+  <text class="small-center" x="565" y="153">services, Proxmox, CUPS</text>
+  <text class="head" x="925" y="130">iot VLAN/subnet</text>
+  <text class="small-center" x="925" y="153">printer stays contained</text>
+
+  <path class="card" d="M72 205 C78 199 188 200 195 207 C202 214 200 281 192 287 C184 293 79 292 72 285 C65 278 65 212 72 205 Z"/>
+  <text class="text-center" x="134" y="236">Android</text>
+  <text class="small-center" x="134" y="260">phone/tablet</text>
+
+  <path class="card" d="M72 340 C78 334 188 335 195 342 C202 349 200 416 192 422 C184 428 79 427 72 420 C65 413 65 347 72 340 Z"/>
+  <text class="text-center" x="134" y="371">clients</text>
+  <text class="small-center" x="134" y="395">normal devices</text>
+
+  <path class="relay" d="M245 244 C252 238 342 239 349 247 C356 255 353 392 345 399 C337 406 253 405 245 397 C237 389 237 252 245 244 Z"/>
+  <text class="text-center" x="296" y="277">print relay</text>
+  <text class="mono" x="256" y="305">Avahi _ipps</text>
+  <text class="mono" x="263" y="330">nginx :443</text>
+  <text class="small-center" x="296" y="365">in access</text>
+
+  <path class="card" d="M500 255 C507 249 630 250 637 257 C644 264 642 369 634 376 C626 383 508 382 500 374 C492 366 492 263 500 255 Z"/>
+  <text class="text-center" x="568" y="297">CUPS</text>
+  <text class="small-center" x="568" y="322">real print server</text>
+  <text class="small-center" x="568" y="346">in mgmt</text>
+
+  <path class="card" d="M842 236 C850 229 1005 230 1014 239 C1023 248 1020 386 1011 394 C1002 402 850 401 842 392 C834 383 834 245 842 236 Z"/>
+  <text class="text-center" x="928" y="278">HP Color Laser</text>
+  <text class="text-center" x="928" y="304">MFP 178nw</text>
+  <text class="small-center" x="928" y="334">TLS configured</text>
+  <text class="small-center" x="928" y="358">not on client Wi-Fi</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M196 235 C214 235 229 240 244 255"/>
+  <rect class="label" x="176" y="204" width="104" height="26" rx="8"/>
+  <text class="tiny-mono" x="191" y="222">mDNS 5353</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M196 263 C216 274 229 288 244 302"/>
+  <path class="ink" marker-end="url(#arrow)" d="M196 375 C218 369 231 356 244 342"/>
+  <rect class="label" x="196" y="322" width="62" height="26" rx="8"/>
+  <text class="tiny-mono" x="213" y="340">IPPS</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M345 312 C397 299 447 298 498 307"/>
+  <rect class="label" x="382" y="262" width="112" height="28" rx="8"/>
+  <text class="mono" x="413" y="282">IPPS</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M639 316 C712 314 770 309 840 306"/>
+  <rect class="label" x="700" y="272" width="112" height="28" rx="8"/>
+  <text class="mono" x="731" y="292">IPPS</text>
+
+  <path class="transport" d="M58 535 C67 527 1050 529 1060 539 C1070 549 1066 672 1056 681 C1046 690 70 688 60 679 C50 670 49 544 58 535 Z"/>
+  <text class="head" x="360" y="575">OpenWrt transport layer</text>
+  <text class="small-center" x="360" y="602">APs carry mgmt/access/iot VLANs over dynamic VLAN assignment,</text>
+  <text class="small-center" x="360" y="624">batman-adv, and wired backhaul.</text>
+  <text class="small-center" x="360" y="655">User-facing result: tap Print, see printer, print.</text>
+
+  <path class="warn" d="M735 568 C742 562 1038 563 1045 570 C1052 577 1050 635 1042 641 C1034 647 743 646 735 639 C728 632 728 575 735 568 Z"/>
+  <text class="small" x="760" y="595">old pain: ath10k-ct + AP/VLAN multicast</text>
+  <text class="small" x="760" y="619">fix: upstream ath10k firmware packages</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560" role="img" aria-labelledby="title desc">
+  <title id="title">Final printer relay architecture</title>
+  <desc id="desc">Access subnet clients discover a subnet-local relay with Avahi, connect to nginx over IPPS/TLS, then nginx proxies to CUPS, which prints to the HP printer in the IoT subnet.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#1f2937"/>
+    </marker>
+    <style>
+      .ink { stroke: #1f2937; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .soft { stroke: #64748b; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-dasharray: 7 7; }
+      .subnet-blue { fill: #eff6ff; stroke: #1f2937; stroke-width: 2.4; }
+      .subnet-green { fill: #ecfdf5; stroke: #1f2937; stroke-width: 2.4; }
+      .subnet-amber { fill: #fffbeb; stroke: #1f2937; stroke-width: 2.4; }
+      .card { fill: #fffefa; stroke: #1f2937; stroke-width: 2; }
+      .service { fill: #f0fdf4; stroke: #166534; stroke-width: 2; }
+      .edge-label { fill: #ffffff; stroke: #1f2937; stroke-width: 1.5; }
+      .title { fill: #111827; font: 700 29px sans-serif; }
+      .subnet-title { fill: #111827; font: 700 19px sans-serif; }
+      .text { fill: #111827; font: 17px sans-serif; }
+      .small { fill: #4b5563; font: 15px sans-serif; }
+      .mono { fill: #111827; font: 15px monospace; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="560" fill="#ffffff"/>
+  <text class="title" x="42" y="50">The final shape: ordinary printing, suspiciously specific plumbing</text>
+
+  <path class="subnet-blue" d="M50 92 C56 86 292 88 299 95 C306 102 304 454 296 462 C288 470 58 468 51 461 C44 454 43 99 50 92 Z"/>
+  <path class="subnet-green" d="M366 92 C373 86 683 88 690 95 C697 102 695 454 687 462 C679 470 374 468 367 461 C360 454 359 99 366 92 Z"/>
+  <path class="subnet-amber" d="M760 92 C767 86 1022 88 1029 95 C1036 102 1034 454 1026 462 C1018 470 768 468 761 461 C754 454 753 99 760 92 Z"/>
+
+  <text class="subnet-title" x="78" y="130">access subnet/VLAN</text>
+  <text class="small" x="78" y="153">normal client devices</text>
+  <text class="subnet-title" x="395" y="130">subnet-local print relay</text>
+  <text class="small" x="395" y="153">what Android thinks is the printer</text>
+  <text class="subnet-title" x="790" y="130">iot subnet/VLAN</text>
+  <text class="small" x="790" y="153">where the printer actually lives</text>
+
+  <path class="card" d="M88 205 C94 199 216 200 223 207 C230 214 228 278 220 284 C212 290 95 289 88 282 C81 275 81 212 88 205 Z"/>
+  <text class="text" x="119" y="235">phone</text>
+  <text class="small" x="108" y="260">Android print</text>
+
+  <path class="card" d="M88 330 C94 324 216 325 223 332 C230 339 228 403 220 409 C212 415 95 414 88 407 C81 400 81 337 88 330 Z"/>
+  <text class="text" x="118" y="360">tablet</text>
+  <text class="small" x="106" y="385">also Android</text>
+
+  <path class="service" d="M410 196 C418 189 555 190 563 198 C571 206 568 283 560 290 C552 297 418 296 410 288 C402 280 402 204 410 196 Z"/>
+  <text class="text" x="458" y="230">Avahi</text>
+  <text class="mono" x="437" y="257">_ipps._tcp</text>
+
+  <path class="service" d="M410 326 C418 319 555 320 563 328 C571 336 568 413 560 420 C552 427 418 426 410 418 C402 410 402 334 410 326 Z"/>
+  <text class="text" x="455" y="360">nginx</text>
+  <text class="mono" x="437" y="387">TCP/443</text>
+
+  <path class="card" d="M610 260 C617 254 704 255 711 262 C718 269 716 343 708 350 C700 357 618 356 610 348 C602 340 602 268 610 260 Z"/>
+  <text class="text" x="636" y="292">CUPS</text>
+  <text class="small" x="627" y="318">server</text>
+
+  <path class="card" d="M810 235 C818 228 980 229 989 238 C998 247 995 366 986 374 C977 382 818 381 810 372 C802 363 802 244 810 235 Z"/>
+  <text class="text" x="842" y="274">HP Color Laser</text>
+  <text class="text" x="850" y="300">MFP 178nw</text>
+  <text class="small" x="840" y="330">TLS configured</text>
+  <text class="small" x="837" y="354">still isolated</text>
+
+  <path class="soft" marker-end="url(#arrow)" d="M225 235 C280 214 342 214 407 230"/>
+  <path class="soft" marker-end="url(#arrow)" d="M225 360 C282 338 342 337 407 360"/>
+  <rect class="edge-label" x="268" y="190" width="103" height="28" rx="8"/>
+  <text class="mono" x="282" y="210">mDNS</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M225 262 C292 292 338 320 407 359"/>
+  <path class="ink" marker-end="url(#arrow)" d="M225 387 C291 398 338 393 407 386"/>
+  <rect class="edge-label" x="274" y="405" width="116" height="28" rx="8"/>
+  <text class="mono" x="288" y="425">IPPS/TLS</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M565 372 C586 354 596 336 609 314"/>
+
+  <path class="ink" marker-end="url(#arrow)" d="M713 305 C742 304 776 304 808 304"/>
+  <rect class="edge-label" x="716" y="260" width="82" height="28" rx="8"/>
+  <text class="mono" x="730" y="280">print</text>
+
+  <text class="small" x="83" y="520">Clients get a local-looking printer. The messy part stays in the relay.</text>
+</svg>

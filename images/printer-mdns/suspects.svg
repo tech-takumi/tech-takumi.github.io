@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="460" viewBox="0 0 980 460" role="img" aria-labelledby="title desc">
+  <title id="title">Printer debugging suspects</title>
+  <desc id="desc">A checklist of suspects ruled out before the access point firmware root cause was found.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f8f4; }
+      .title { fill: #202423; font: 700 26px sans-serif; }
+      .item { fill: #ffffff; stroke: #202423; stroke-width: 2; }
+      .root { fill: #e7f0ed; stroke: #2f6f5e; stroke-width: 3; }
+      .text { fill: #202423; font: 19px sans-serif; }
+      .mono { fill: #202423; font: 16px monospace; }
+      .check { fill: #2f6f5e; font: 700 22px sans-serif; }
+      .warn { fill: #8a5a22; font: 700 22px sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="980" height="460"/>
+  <text class="title" x="44" y="54">The printer mystery board</text>
+  <rect class="item" x="55" y="95" width="390" height="58" rx="8"/>
+  <text class="check" x="78" y="132">OK</text>
+  <text class="text" x="124" y="132">nginx could proxy IPPS</text>
+  <rect class="item" x="535" y="95" width="390" height="58" rx="8"/>
+  <text class="check" x="558" y="132">OK</text>
+  <text class="text" x="604" y="132">CUPS queue worked</text>
+  <rect class="item" x="55" y="175" width="390" height="58" rx="8"/>
+  <text class="check" x="78" y="212">OK</text>
+  <text class="text" x="124" y="212">Android accepted the advert</text>
+  <rect class="item" x="535" y="175" width="390" height="58" rx="8"/>
+  <text class="check" x="558" y="212">OK</text>
+  <text class="text" x="604" y="212">Avahi answered completely</text>
+  <rect class="item" x="55" y="255" width="390" height="58" rx="8"/>
+  <text class="warn" x="78" y="292">NO</text>
+  <text class="text" x="124" y="292">mDNS reflection as foundation</text>
+  <rect class="item" x="535" y="255" width="390" height="58" rx="8"/>
+  <text class="warn" x="558" y="292">NO</text>
+  <text class="text" x="604" y="292">manual Android setup</text>
+  <rect class="root" x="205" y="350" width="570" height="70" rx="8"/>
+  <text class="warn" x="235" y="392">ROOT</text>
+  <text class="mono" x="310" y="392">ath10k-ct + dynamic VLAN multicast</text>
+</svg>

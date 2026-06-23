@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Android IPPS discovery flow</title>
+  <desc id="desc">Android sends mDNS printer discovery queries, the relay replies with DNS-SD records, then Android connects to TCP port 443.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f8f4; }
+      .lane { fill: #ffffff; stroke: #222; stroke-width: 2; }
+      .title { fill: #202423; font: 700 24px sans-serif; }
+      .head { fill: #202423; font: 700 18px sans-serif; }
+      .text { fill: #202423; font: 16px sans-serif; }
+      .mono { fill: #202423; font: 15px monospace; }
+      .muted { fill: #646b68; font: 15px sans-serif; }
+      .line { stroke: #202423; stroke-width: 3; marker-end: url(#arrow); fill: none; }
+      .reply { stroke: #2f6f5e; stroke-width: 3; marker-end: url(#arrowGreen); fill: none; }
+      .tcp { stroke: #8a5a22; stroke-width: 3; marker-end: url(#arrowGold); fill: none; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#202423"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f6f5e"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a5a22"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="980" height="520"/>
+  <text class="title" x="40" y="48">What Android needed to see</text>
+  <rect class="lane" x="55" y="92" width="260" height="370" rx="8"/>
+  <rect class="lane" x="360" y="92" width="260" height="370" rx="8"/>
+  <rect class="lane" x="665" y="92" width="260" height="370" rx="8"/>
+  <text class="head" x="110" y="130">Android client</text>
+  <text class="head" x="429" y="130">mDNS / IPPS relay</text>
+  <text class="head" x="730" y="130">CUPS / printer</text>
+  <path class="line" d="M190 178 H486"/>
+  <text class="mono" x="210" y="169">PTR _ipps._tcp.local</text>
+  <path class="reply" d="M490 242 H198"/>
+  <text class="mono" x="227" y="231">PTR + SRV + TXT + A</text>
+  <text class="muted" x="402" y="268">complete, same-subnet answer</text>
+  <path class="tcp" d="M190 333 H486"/>
+  <text class="mono" x="247" y="324">TCP/443 IPPS</text>
+  <path class="tcp" d="M620 333 H744"/>
+  <text class="mono" x="638" y="324">proxy</text>
+  <text class="text" x="86" y="410">If the records were incomplete,</text>
+  <text class="text" x="86" y="434">Android did not show the printer.</text>
+  <text class="text" x="392" y="410">If AP multicast was broken,</text>
+  <text class="text" x="392" y="434">the answer did not matter.</text>
+  <text class="text" x="696" y="410">The actual printer stayed</text>
+  <text class="text" x="696" y="434">isolated in the IoT network.</text>
+</svg>

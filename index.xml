@@ -1,29 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tech Takumi</title>
-    <link>https://tech-takumi.github.io/</link>
-    <description>Recent content on Tech Takumi</description>
-    <generator>Hugo -- 0.126.1</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 18 Aug 2024 12:35:21 +0200</lastBuildDate>
-    <atom:link href="https://tech-takumi.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Constraints Existing Tech Part1</title>
-      <link>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</link>
-      <pubDate>Sun, 18 Aug 2024 12:35:21 +0200</pubDate>
-      <guid>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</guid>
-      <description>Introduction Do you ever wonder: what could I take as my next project? Well, I do. And it usually begins with the thought of acquiring a new device for tinkering.
-But what if the thingy costs as much as a kidney? Or if it will take 3 weeks to get to your place?
-The epiphany I had, and which I wanted to share, is the fact that there is joy in just messing around with stuff that you have at hand.</description>
-    </item>
-    <item>
-      <title>How to Automate Your Router&#39;s Backup and Keep Your Sanity Intact</title>
-      <link>https://tech-takumi.github.io/posts/automate-router-backup/</link>
-      <pubDate>Sat, 17 Aug 2024 23:47:55 +0200</pubDate>
-      <guid>https://tech-takumi.github.io/posts/automate-router-backup/</guid>
-      <description>Automating My Fritz!Box Backup: The Quest for Router Zen Every techie knows that there’s nothing quite like the feeling of having your entire setup just&amp;hellip; work. But let’s be honest—this nirvana is often more myth than reality. I’ve always envisioned automating the configuration of all my devices, making it reproducible, and yes, even bulletproof. The router, of course, had to be part of this vision.
-Why Bother with Router Backups? Let’s face it—routers are the unsung heroes of our homes.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Tech Takumi</title><link>https://tech-takumi.github.io/</link><description>Recent content on Tech Takumi</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 23 Jun 2026 19:15:00 +0200</lastBuildDate><atom:link href="https://tech-takumi.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>So, my wife wanted to print...</title><link>https://tech-takumi.github.io/posts/my-wife-wanted-to-print/</link><pubDate>Tue, 23 Jun 2026 19:15:00 +0200</pubDate><guid>https://tech-takumi.github.io/posts/my-wife-wanted-to-print/</guid><description>&lt;p&gt;Before this, the only reliable way to print at home was for me to upload PDFs over SFTP to my CUPS server and print them from there.&lt;/p&gt;
+&lt;p&gt;This worked great, assuming you were me.&lt;/p&gt;
+&lt;p&gt;My wife, quite reasonably, wanted to print like a normal person. From her device, over Wi-Fi. Without opening a ticket with the household infrastructure department.&lt;/p&gt;
+&lt;p&gt;And, also quite reasonably, she has observed before that I make everything complex.&lt;/p&gt;</description></item><item><title>Constraints Existing Tech Part1</title><link>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</link><pubDate>Sun, 18 Aug 2024 12:35:21 +0200</pubDate><guid>https://tech-takumi.github.io/posts/constraints-existing-tech-part1/</guid><description>&lt;h3 id="introduction"&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;Do you ever wonder: what could I take as my next project? Well, I do. And it usually begins with the thought of acquiring a new device for tinkering.&lt;/p&gt;
+&lt;p&gt;But what if the thingy costs as much as a kidney? Or if it will take 3 weeks to get to your place?&lt;/p&gt;
+&lt;p&gt;The epiphany I had, and which I wanted to share, is the fact that there is joy in just messing around with stuff that you have at hand. Especially with the things that you use every day and in with the right point of view, can review a lot of secret goodies.&lt;/p&gt;</description></item><item><title>How to Automate Your Router's Backup and Keep Your Sanity Intact</title><link>https://tech-takumi.github.io/posts/automate-router-backup/</link><pubDate>Sat, 17 Aug 2024 23:47:55 +0200</pubDate><guid>https://tech-takumi.github.io/posts/automate-router-backup/</guid><description>&lt;h2 id="automating-my-fritzbox-backup-the-quest-for-router-zen"&gt;Automating My Fritz!Box Backup: The Quest for Router Zen&lt;/h2&gt;
+&lt;p&gt;Every techie knows that there’s nothing quite like the feeling of having your entire setup just&amp;hellip; work. But let’s be honest—this nirvana is often more myth than reality. I’ve always envisioned automating the configuration of all my devices, making it reproducible, and yes, even bulletproof. The router, of course, had to be part of this vision.&lt;/p&gt;
+&lt;h3 id="why-bother-with-router-backups"&gt;Why Bother with Router Backups?&lt;/h3&gt;
+&lt;p&gt;Let’s face it—routers are the unsung heroes of our homes. They work tirelessly, beaming Wi-Fi signals through walls, surviving firmware updates, and sometimes even a curious toddler’s “experiments.” Yet, when it comes to backup, they get no love. I decided it was time to change that.&lt;/p&gt;</description></item></channel></rss>

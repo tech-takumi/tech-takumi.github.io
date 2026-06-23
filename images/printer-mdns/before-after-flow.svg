@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="460" viewBox="0 0 980 460" role="img" aria-labelledby="title desc">
+  <title id="title">Printing before and after the relay</title>
+  <desc id="desc">Before, printing required sending a PDF over SFTP to the household infrastructure department. After, a person taps Print, the printer appears, and the relay handles the complexity.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#1f2937"/>
+    </marker>
+    <style>
+      .ink { stroke: #1f2937; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .dash { stroke-dasharray: 8 7; }
+      .panel-before { fill: #fff7ed; stroke: #1f2937; stroke-width: 2.4; }
+      .panel-after { fill: #ecfdf5; stroke: #1f2937; stroke-width: 2.4; }
+      .card { fill: #fffefa; stroke: #1f2937; stroke-width: 2; }
+      .accent { fill: #facc15; stroke: #1f2937; stroke-width: 2; }
+      .muted { fill: #f3f4f6; stroke: #1f2937; stroke-width: 2; }
+      .title { fill: #111827; font: 700 28px sans-serif; }
+      .label { fill: #111827; font: 700 19px sans-serif; }
+      .text { fill: #111827; font: 17px sans-serif; }
+      .small { fill: #4b5563; font: 15px sans-serif; }
+      .mono { fill: #111827; font: 16px monospace; }
+    </style>
+  </defs>
+
+  <rect width="980" height="460" fill="#ffffff"/>
+  <text class="title" x="42" y="48">Same goal, very different household experience</text>
+
+  <path class="panel-before" d="M49 86 C48 84 445 83 449 88 C454 93 452 373 447 379 C442 385 54 384 49 378 C43 371 43 94 49 86 Z"/>
+  <path class="panel-after" d="M532 86 C536 82 931 84 937 90 C943 96 939 371 933 378 C927 385 539 384 532 378 C526 371 526 94 532 86 Z"/>
+
+  <text class="label" x="76" y="128">Before</text>
+  <text class="small" x="76" y="153">reliable, assuming you were me</text>
+
+  <text class="label" x="560" y="128">After</text>
+  <text class="small" x="560" y="153">ordinary from the outside</text>
+
+  <path class="card" d="M78 195 C82 190 169 191 174 196 C179 201 177 250 172 255 C167 260 83 260 78 255 C73 250 73 200 78 195 Z"/>
+  <text class="text" x="106" y="228">PDF</text>
+
+  <path class="card" d="M210 195 C215 190 325 191 331 197 C337 203 334 250 329 255 C324 260 215 260 210 255 C205 250 204 201 210 195 Z"/>
+  <text class="text" x="233" y="219">SFTP to</text>
+  <text class="text" x="239" y="242">me</text>
+
+  <path class="card" d="M152 292 C158 287 281 288 287 294 C293 300 291 348 284 353 C277 358 158 358 152 352 C146 346 146 298 152 292 Z"/>
+  <text class="text" x="183" y="320">CUPS</text>
+  <text class="small" x="176" y="340">server</text>
+
+  <path class="muted" d="M337 294 C342 288 417 289 423 295 C429 301 428 347 421 353 C414 359 343 358 337 352 C331 346 331 300 337 294 Z"/>
+  <text class="text" x="357" y="327">print</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M176 225 C187 225 196 225 207 225"/>
+  <path class="ink" marker-end="url(#arrow)" d="M268 258 C254 276 238 285 221 292"/>
+  <path class="ink" marker-end="url(#arrow)" d="M290 323 C306 323 320 323 335 323"/>
+
+  <path class="card" d="M570 195 C576 190 677 191 683 197 C689 203 687 250 681 255 C675 260 575 260 570 254 C564 248 564 201 570 195 Z"/>
+  <text class="text" x="600" y="219">tap</text>
+  <text class="text" x="594" y="242">Print</text>
+
+  <path class="accent" d="M716 183 C724 176 843 178 851 186 C858 193 855 265 847 272 C839 279 722 279 715 270 C708 261 708 190 716 183 Z"/>
+  <text class="text" x="748" y="215">printer</text>
+  <text class="text" x="745" y="239">appears</text>
+  <text class="small" x="751" y="260">magic*</text>
+
+  <path class="card" d="M650 315 C656 309 775 310 781 316 C787 322 785 370 778 375 C771 380 656 380 650 374 C644 368 644 321 650 315 Z"/>
+  <text class="text" x="681" y="344">IPPS relay</text>
+
+  <path class="muted" d="M832 315 C837 310 913 310 919 316 C925 322 923 369 916 375 C909 381 838 380 832 374 C826 368 826 321 832 315 Z"/>
+  <text class="text" x="852" y="348">print</text>
+
+  <path class="ink" marker-end="url(#arrow)" d="M684 225 C696 225 704 225 715 225"/>
+  <path class="ink dash" marker-end="url(#arrow)" d="M778 276 C764 292 746 305 727 315"/>
+  <path class="ink" marker-end="url(#arrow)" d="M783 346 C800 346 815 346 830 346"/>
+
+  <text class="mono" x="555" y="424">* magic = packets + mDNS + nginx</text>
+</svg>
